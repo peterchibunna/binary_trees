@@ -38,7 +38,7 @@ int btic_helper(const binary_tree_t *tree, size_t index, size_t size)
 		return (0);
 
 	return (btic_helper(tree->left, 2 * index + 1, size) &&
-	        btic_helper(tree->right, 2 * index + 2, size));
+		btic_helper(tree->right, 2 * index + 2, size));
 }
 
 /**
@@ -54,5 +54,5 @@ size_t binary_tree_size(const binary_tree_t *tree)
 		return (0);
 
 	return (binary_tree_size(tree->left) +
-	        binary_tree_size(tree->right) + 1);
+		binary_tree_size(tree->right) + 1);
 }
